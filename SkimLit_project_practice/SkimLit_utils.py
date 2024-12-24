@@ -14,7 +14,7 @@ def read_lines(filepath):
 
     Argument: 
         filepath (str): Path to a file.
-    Returns:
+    Return:
         list: A list of strings, each string representing a line in the file.
     """
     with open(filepath, "r") as file:
@@ -27,7 +27,7 @@ def preprocess_data_with_line_numbers(filepath):
 
     Argument:
         filepath (str): Path to the file.
-    Returns:
+    Return:
         list: A list of dictionaries where each dictionary contains:
             - 'label': The label of the line.
             - 'text': The text content of the line, converted to lowercase.
@@ -63,10 +63,17 @@ def preprocess_data_with_line_numbers(filepath):
 # Perform evaluations on prediction results
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
-def perform_evaluations(y_true, y_pred):
+def perform_evaluations(y_true, y_pred,model_name):
+  """
+  Argument:
+    y_true (array): true labels
+    y_pred (array): predicted labels
+    model_name (str): name of the model
+  Return:
+    A dictionary consisting: (1) an item called "Metric" of a list of metric names
+                             (2) an item called "model_name" of a list of metric values
+  """
   accuracy = accuracy_score(y_true, y_pred) * 100
   precision, recall, f1_score, _ = precision_recall_fscore_support(y_true,y_pred, average = "weighted")
-  return {"accuracy": accuracy, 
-          "precision": precision, 
-          "recall": recall,
-          "F1": f1_score}
+  return {"Metric": ["accuracy", "precision", "recall", "F1"],
+          model_name: [accuracy, precision, recall, f1_score]}
