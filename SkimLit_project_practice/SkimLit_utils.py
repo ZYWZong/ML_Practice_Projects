@@ -93,7 +93,7 @@ def SkimLit_preprocess_OneHot_NN(train_df, dev_df, test_df):
     Argument:
       data_dir (str): path to data
     Return:
-      a tuple containing the train, dev, and test data
+      a tuple containing the train, dev, and test sentences and their labels
     """
     train_sentences = train_df["text"].tolist()
     dev_sentences = dev_df["text"].tolist()
