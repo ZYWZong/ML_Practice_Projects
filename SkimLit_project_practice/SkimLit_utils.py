@@ -66,6 +66,7 @@ import pandas as pd
 def SkimLit_preprocess_master(data_dir):
   """
   Master wrapper function for data preprocessing for SkimLit project
+  
   Argument:
     data_dir (str): path to data
   Return:
@@ -80,6 +81,30 @@ def SkimLit_preprocess_master(data_dir):
   test_df = pd.DataFrame(test_samples)
   
   return train_df, dev_df, test_df
+
+
+def SkimLit_preprocess_OneHot_NN(train_df, dev_df, test_df):
+    """
+    Generate one hot encdoing for the text labels and convert the text sentences into list for
+    builtin preprocessing functions in tensorflow (e.g. batching).
+    
+    Argument:
+      data_dir (str): path to data
+    Return:
+      a tuple containing the train, dev, and test data
+    """
+    train_sentences = train_df["text"].tolist()
+    dev_sentences = dev_df["text"].tolist()
+    test_sentences = test_df["text"].tolist()
+    
+    one_hot_encoder = OneHotEncoder(sparse_output=False)
+    train_labels_one_hot = one_hot_encoder.fit_transform(train_df["label"].to_numpy().reshape(-1, 1))
+    dev_labels_one_hot = one_hot_encoder.transform(dev_df["label"].to_numpy().reshape(-1, 1))
+    test_labels_one_hot = one_hot_encoder.transform(test_df["label"].to_numpy().reshape(-1, 1))
+
+    return {"train_text": train_sentences, "dev_text": dev_sentences, "test_text": test_sentences,
+            "train_label": train_labels_one_hot, "dev_label": dev_labels_one_hot, "test_label": test_labels_one_hot
+           }
 
 
 #-------------------------------------------
