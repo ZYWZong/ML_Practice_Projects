@@ -2,11 +2,13 @@
 
 ## Objective
 
-Build a neural network model that beats my best baseline model (built using classic statistical learning methodds) on `accuracy` while maintaining at least $70$% on `precision`, `recall`, and `F-1` scores.
+Build a neural network model that beats my best baseline model (built using classic statistical learning methodds) on `accuracy` while maintaining at least $70$% on `precision`, `recall`, and `F-1` scores. The data used for this project are from *PubMed*.
+
+## Result
 
 ## File description
 
-## Result
+
 
 ## Acknowledgment
 
