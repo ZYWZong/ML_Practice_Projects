@@ -4,6 +4,8 @@
 
 Build a neural network model that beats my best baseline model (built using classic statistical learning methodds) on `accuracy` while maintaining at least $70$% on `precision`, `recall`, and `F-1` scores.
 
+## File description
+
 ## Result
 
 ## Acknowledgment
