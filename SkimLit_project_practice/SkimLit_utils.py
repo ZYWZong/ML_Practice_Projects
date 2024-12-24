@@ -60,6 +60,42 @@ def preprocess_data_with_line_numbers(filepath):
 
     return abstract_preprocessed
 
+
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+
+def SkimLit_preprocess_master(data_dir):
+  """
+  Master wrapper function for data preprocessing for SkimLit project
+  Argument:
+    data_dir (str): path to data
+  Return:
+    A dictionary containing train, dev, test data and their labels
+  """
+  train_samples = preprocess_data_with_line_numbers(data_dir + "train.txt")
+  dev_samples = preprocess_data_with_line_numbers(data_dir + "dev.txt")
+  test_samples = preprocess_data_with_line_numbers(data_dir + "test.txt")
+
+  train_df = pd.DataFrame(train_samples)
+  dev_df = pd.DataFrame(dev_samples)
+  test_df = pd.DataFrame(test_samples)
+
+  train_sentences = train_df["text"].tolist()
+  dev_sentences = dev_df["text"].tolist()
+  test_sentences = test_df["text"].tolist()
+  
+  one_hot_encoder = OneHotEncoder(sparse_output=False)
+  train_labels_one_hot = one_hot_encoder.fit_transform(train_df["label"].to_numpy().reshape(-1, 1))
+  dev_labels_one_hot = one_hot_encoder.transform(dev_df["label"].to_numpy().reshape(-1, 1))
+  test_labels_one_hot = one_hot_encoder.transform(test_df["label"].to_numpy().reshape(-1, 1))
+  
+  return {"train_text": train_sentences, "dev_text": dev_sentences, "test_text": text_sentences,
+          "train_label": train_labels_one_hot, "dev_label": dev_labels_one_hot, "test_label": test_labels_one_hot
+         }
+
+
+#-------------------------------------------
+
 # Perform evaluations on prediction results
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 import numpy as np
