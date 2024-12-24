@@ -74,7 +74,7 @@ def perform_evaluations(y_true, y_pred,model_name):
     A dictionary consisting: (1) an item called "Metric" of a list of metric names
                              (2) an item called "model_name" of a list of metric values
   """
-  accuracy = np.round(accuracy_score(y_true, y_pred),4)
-  precision, recall, f1_score, _ = np.round(precision_recall_fscore_support(y_true,y_pred, average = "weighted"),4)
+  accuracy = np.round(accuracy_score(y_true, y_pred),4) * 100
+  precision, recall, f1_score, _ = np.round(precision_recall_fscore_support(y_true,y_pred, average = "weighted"),4) * 100
   return {"Metric": ["Accuracy", "Precision", "Recall", "F1-score"],
           model_name: [accuracy, precision, recall, f1_score]}
