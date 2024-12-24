@@ -1,7 +1,7 @@
 """
 This file contains helper functions for the practice project SkimLit
 
-Acknowledgement: 
+Acknowledgment: 
   Parts of the functions are adopted from "TensorFlow for Deep Learning Bootcamp" taught by Daniel Bourke on Udemy.
 """
 
