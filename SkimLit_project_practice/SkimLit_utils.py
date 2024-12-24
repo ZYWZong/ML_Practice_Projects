@@ -83,6 +83,8 @@ def SkimLit_preprocess_master(data_dir):
   return train_df, dev_df, test_df
 
 
+from sklearn.preprocessing import OneHotEncoder
+
 def SkimLit_preprocess_OneHot_NN(train_df, dev_df, test_df):
     """
     Generate one hot encdoing for the text labels and convert the text sentences into list for
