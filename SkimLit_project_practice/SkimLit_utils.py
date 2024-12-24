@@ -62,6 +62,7 @@ def preprocess_data_with_line_numbers(filepath):
 
 # Perform evaluations on prediction results
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+import numpy as np
 
 def perform_evaluations(y_true, y_pred,model_name):
   """
@@ -73,7 +74,7 @@ def perform_evaluations(y_true, y_pred,model_name):
     A dictionary consisting: (1) an item called "Metric" of a list of metric names
                              (2) an item called "model_name" of a list of metric values
   """
-  accuracy = accuracy_score(y_true, y_pred) * 100
-  precision, recall, f1_score, _ = precision_recall_fscore_support(y_true,y_pred, average = "weighted")
+  accuracy = np.round(accuracy_score(y_true, y_pred),2)
+  precision, recall, f1_score, _ = np.round(precision_recall_fscore_support(y_true,y_pred, average = "weighted"),2)
   return {"Metric": ["accuracy", "precision", "recall", "F1"],
           model_name: [accuracy, precision, recall, f1_score]}
