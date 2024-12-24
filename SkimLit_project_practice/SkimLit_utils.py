@@ -5,6 +5,7 @@ Acknowledgement:
   Parts of the functions are adopted from "TensorFlow for Deep Learning Bootcamp" taught by Daniel Bourke on Udemy.
 """
 
+# Preprocess PubMed dataset
 import os
 
 def read_lines(filepath):
@@ -58,3 +59,14 @@ def preprocess_data_with_line_numbers(filepath):
             abstract_lines += line
 
     return abstract_preprocessed
+
+# Perform evaluations on prediction results
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+
+def perform_evaluations(y_true, y_pred):
+  accuracy = accuracy_score(y_true, y_pred) * 100
+  precision, recall, f1_score, _ = precision_recall_fscore_support(y_true,y_pred, average = "weighted")
+  return {"accuracy": accuracy, 
+          "precision": precision, 
+          "recall": recall,
+          "f1": f1_score}
