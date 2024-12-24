@@ -12,5 +12,5 @@ Build a neural network model that beats my best baseline model (built using clas
 
 ## Acknowledgment
 
-This project is adopted from *TensorFlow for Deep Learning Bootcamp* taught by Daniel Bourke on Udemy.
+This project is inspired by a similar project from *TensorFlow for Deep Learning Bootcamp* taught by Daniel Bourke on Udemy.
 
