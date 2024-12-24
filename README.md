@@ -1,1 +1,1 @@
-This repo contains projects completed during my TensorFlow developer bootcamp.
+This repository contains my practicing projects for machine learning techniques.
