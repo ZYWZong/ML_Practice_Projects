@@ -69,4 +69,4 @@ def perform_evaluations(y_true, y_pred):
   return {"accuracy": accuracy, 
           "precision": precision, 
           "recall": recall,
-          "f1": f1_score}
+          "F1": f1_score}
