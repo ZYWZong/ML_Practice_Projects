@@ -76,5 +76,5 @@ def perform_evaluations(y_true, y_pred,model_name):
   """
   accuracy = np.round(accuracy_score(y_true, y_pred),4)
   precision, recall, f1_score, _ = np.round(precision_recall_fscore_support(y_true,y_pred, average = "weighted"),4)
-  return {"Metric": ["accuracy", "precision", "recall", "F1"],
+  return {"Metric": ["Accuracy", "Precision", "Recall", "F1-score"],
           model_name: [accuracy, precision, recall, f1_score]}
