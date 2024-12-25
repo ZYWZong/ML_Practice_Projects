@@ -1,4 +1,4 @@
-# Project: SkimLit PubMed abstract reader
+# Project: SkimLit PubMed abstract classifier
 
 ## Objective
 
