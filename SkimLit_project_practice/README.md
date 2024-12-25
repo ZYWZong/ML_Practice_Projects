@@ -1,4 +1,4 @@
-# Project: SkimLit PubMed abstract classifier
+# Project: SkimLit PubMed sentence classifier
 
 ## Objective
 
