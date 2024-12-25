@@ -111,6 +111,30 @@ def SkimLit_preprocess_OneHot_NN(train_df, dev_df, test_df):
            }
 
 
+import tensorflow as tf
+
+def SkimLit_batching_data(dict_OneHot_NN):
+  """
+  Argument:
+    dict_OneHot_NN: return of the SkimLit_preprocess_OneHot_NN function
+  Return:
+    a dictionary containing batched train, dev, and test data (PrefetchDataset)
+  """
+  train_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["train_sentences"], 
+                                                   dict_OneHot_NN["train_labels_one_hot"]))
+  dev_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["dev_sentences"], 
+                                                 dict_OneHot_NN["dev_labels_one_hot"]))
+  test_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["test_sentences"], 
+                                                  dict_OneHot_NN["test_labels_one_hot"]))
+
+  train_data = train_data.batch(32).prefetch(tf.data.AUTOTUNE)
+  dev_data = dev_data.batch(32).prefetch(tf.data.AUTOTUNE)
+  test_data = test_data.batch(32).prefetch(tf.data.AUTOTUNE)
+
+  return {"train_data": train_data, "dev_data": dev_data, "test_data": test_data}
+
+
+
 #-------------------------------------------
 
 # Perform evaluations on prediction results
