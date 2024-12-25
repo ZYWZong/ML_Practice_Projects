@@ -1,4 +1,4 @@
-# Project: SkimLit PubMed sentence classifier
+# NLP Project 01: SkimLit PubMed sentence classifier
 
 ## Objective
 
