@@ -91,7 +91,9 @@ def SkimLit_preprocess_OneHot_NN(train_df, dev_df, test_df):
     builtin preprocessing functions in tensorflow (e.g. batching).
     
     Argument:
-      data_dir (str): path to data
+      train_df: pandas dataframe for training data
+      dev_df: pandas dataframe for development data
+      test_df: pandas dataframe for test data
     Return:
       a tuple containing the train, dev, and test sentences and their labels
     """
