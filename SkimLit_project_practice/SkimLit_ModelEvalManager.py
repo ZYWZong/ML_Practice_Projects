@@ -30,7 +30,7 @@ class ModelEvalManager:
         """
         self.scores[model_name] = results
 
-    def save_to_github(self, commit_message="Update model scores"):
+    def save(self, commit_message="Update model scores"):
         try:
             file_content = self.repo.get_contents(self.filepath)
             self.repo.update_file(
@@ -43,7 +43,7 @@ class ModelEvalManager:
         except Exception as e:
             print(f"Error updating file: {e}")
 
-    def load_from_github(self):
+    def load(self):
         try:
             file_content = self.repo.get_contents(self.filepath)
             self.scores = json.loads(file_content.decoded_content.decode())
