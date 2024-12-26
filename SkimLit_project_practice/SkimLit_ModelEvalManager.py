@@ -50,4 +50,3 @@ class ModelEvalManager:
             return self.scores
         except Exception as e:
             print(f"Error loading file: {e}")
-            return None
