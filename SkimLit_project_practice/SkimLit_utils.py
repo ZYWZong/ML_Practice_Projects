@@ -162,7 +162,7 @@ import matplotlib.pyplot as plt
 
 def plot_loss_curves(history):
     """
-    Plots the train vs validation losses.
+    Plot the train vs validation losses.
 
     Argument:
         history: tensorFlow History object
@@ -181,3 +181,44 @@ def plot_loss_curves(history):
     plt.ylabel("loss")
     plt.legend(bbox_to_anchor=(1.0, 1.0))
     plt.show();
+
+
+def plot_loss_and_accuracy(history):
+    """
+    Plot the train vs validation losses and the train vs validation accuracy
+
+    Argument:
+        history: tensorFlow History object
+    Return:
+        None
+    """
+    train_loss = history.history["loss"]
+    val_loss = history.history["val_loss"]
+    train_accuracy = history.history["accuracy"]
+    val_accuracy = history.history["val_accuracy"]
+    x = range(len(train_loss))
+
+  
+    plt.figure(figsize=(12, 5))
+    # Plot loss
+    plt.subplot(1, 2, 1)
+    plt.plot(x,train_loss, label="training loss")
+    plt.plot(x,val_loss, label="validation loss")
+    plt.xticks(x)
+    plt.title("Loss Curves")
+    plt.xlabel("epochs")
+    plt.ylabel("loss")
+    plt.legend(bbox_to_anchor=(1.0, 1.0))
+
+    # plot accuracy
+    plt.subplot(1, 2, 2)
+    plt.plot(x, train_accuracy, label="training accuracy")
+    plt.plot(x, val_accuracy, label="validation accuracy")
+    plt.xticks(x)
+    plt.title("Accuracy Curves")
+    plt.xlabel("epochs")
+    plt.ylabel("accuracy")
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
