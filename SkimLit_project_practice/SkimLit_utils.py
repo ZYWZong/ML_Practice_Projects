@@ -217,7 +217,7 @@ def plot_loss_and_accuracy(history):
     plt.title("Accuracy Curves")
     plt.xlabel("epochs")
     plt.ylabel("accuracy")
-    plt.legend()
+    plt.legend(bbox_to_anchor=(1.0, 1.0))
 
     plt.tight_layout()
     plt.show()
