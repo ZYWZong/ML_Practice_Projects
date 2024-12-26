@@ -81,7 +81,16 @@ def SkimLit_preprocess_master(data_dir):
   test_df = pd.DataFrame(test_samples)
   
   return train_df, dev_df, test_df
+  
 
+from sklearn.preprocessing import LabelEncoder
+
+def SkimLit_preprocess_EncodedLabels(train_df,dev_df,test_df):
+  label_encoder = LabelEncoder()
+  train_labels_encoded = label_encoder.fit_transform(train_df["label"].to_numpy())
+  dev_labels_encoded = label_encoder.transform(dev_df["label"].to_numpy())
+  test_labels_encoded = label_encoder.transform(test_df["label"].to_numpy())
+  return {"train_label":train_labels_encoded, "dev_label":dev_labels_encoded, "test_label":test_labels_encoded}
 
 from sklearn.preprocessing import OneHotEncoder
 
