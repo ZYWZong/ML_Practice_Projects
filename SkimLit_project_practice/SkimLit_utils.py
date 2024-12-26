@@ -171,7 +171,7 @@ def plot_loss_curves(history):
     """
     train_loss = history.history["loss"]
     val_loss = history.history["val_loss"]
-    x = range(len(train_loss))
+    x = range(1,len(train_loss)+1)
 
     plt.plot(x, train_loss, label="Training Loss")
     plt.plot(x, val_loss, label="Validation Loss")
@@ -196,7 +196,7 @@ def plot_loss_and_accuracy(history):
     val_loss = history.history["val_loss"]
     train_accuracy = history.history["accuracy"]
     val_accuracy = history.history["val_accuracy"]
-    x = range(len(train_loss))
+    x = range(1,len(train_loss)+1)
   
     plt.figure(figsize=(12, 5))
     # Plot loss
