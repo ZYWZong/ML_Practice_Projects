@@ -197,7 +197,6 @@ def plot_loss_and_accuracy(history):
     train_accuracy = history.history["accuracy"]
     val_accuracy = history.history["val_accuracy"]
     x = range(len(train_loss))
-
   
     plt.figure(figsize=(12, 5))
     # Plot loss
