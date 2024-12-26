@@ -156,3 +156,28 @@ def perform_evaluations(y_true, y_pred,model_name):
   results = np.round(np.array([accuracy, precision, recall, f1_score]),4) * 100
   return {"Metric": ["Accuracy", "Precision", "Recall", "F1-score"],
           model_name: results}
+
+
+import matplotlib.pyplot as plt
+
+def plot_loss_curves(history):
+    """
+    Plots the train vs validation losses.
+
+    Argument:
+        history: tensorFlow History object
+    Return:
+        None
+    """
+    train_loss = history.history["loss"]
+    val_loss = history.history["val_loss"]
+    x = range(len(train_loss))
+
+    plt.plot(x, train_loss, label="Training Loss")
+    plt.plot(x, val_loss, label="Validation Loss")
+    plt.xticks(x)
+    plt.title("Loss Curves")
+    plt.xlabel("epochs")
+    plt.ylabel("loss")
+    plt.legend(bbox_to_anchor=(1.0, 1.0))
+    plt.show();
