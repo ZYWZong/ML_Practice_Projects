@@ -6,7 +6,7 @@ This project is to classify sentences of an abstract into five categories of `OB
 
 ## Result
 
-## File description
+## Experimentation process
 
 
 
