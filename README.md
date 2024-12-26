@@ -1,1 +1,1 @@
-This repository contains my practicing projects for machine learning techniques.
+This repository contains my practice projects for machine learning techniques.
