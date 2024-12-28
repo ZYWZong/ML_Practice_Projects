@@ -129,12 +129,12 @@ def SkimLit_batching_data(dict_OneHot_NN):
   Return:
     a dictionary containing batched train, dev, and test data (PrefetchDataset)
   """
-  train_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["train_sentences"], 
-                                                   dict_OneHot_NN["train_labels_one_hot"]))
-  dev_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["dev_sentences"], 
-                                                 dict_OneHot_NN["dev_labels_one_hot"]))
-  test_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["test_sentences"], 
-                                                  dict_OneHot_NN["test_labels_one_hot"]))
+  train_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["train_text"], 
+                                                   dict_OneHot_NN["train_label"]))
+  dev_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["dev_text"], 
+                                                 dict_OneHot_NN["dev_label"]))
+  test_data = tf.data.Dataset.from_tensor_slices((dict_OneHot_NN["test_text"], 
+                                                  dict_OneHot_NN["test_label"]))
 
   train_data = train_data.batch(32).prefetch(tf.data.AUTOTUNE)
   dev_data = dev_data.batch(32).prefetch(tf.data.AUTOTUNE)
