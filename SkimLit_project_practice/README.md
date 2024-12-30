@@ -12,7 +12,7 @@ We performed experiments on CNN, RNN (LSTM and GRU), and transfomer architecture
 
 The detailed socres are:
 
-| Metric ($\%$)  | Random Forest 15 (baseline) | Model CNN E1 | Model LSTM |
+| Metric (%)  | Random Forest 15 (baseline) | Model CNN E1 | Model LSTM |
 | :-------- | :-------: | :-------: | :-------: |
 | Accuracy  | 76.10     | 78.57     | 84.51     |
 | Precision | 75.48     | 78.27     | 84.96     |
