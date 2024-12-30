@@ -6,7 +6,7 @@ This project is to classify sentences of an abstract into five categories of `OB
 
 ## Result
 
-![image info]([pictures/image.png](https://github.com/ZYWZong/ML_Practice_Projects/blob/188da79bbd0e4a33c56bd5d794f26b6b506737b7/SkimLit_project_practice/SkimLit_results_raw/Result_scores.png))
+![pictures/image.png](https://github.com/ZYWZong/ML_Practice_Projects/blob/188da79bbd0e4a33c56bd5d794f26b6b506737b7/SkimLit_project_practice/SkimLit_results_raw/Result_scores.png)
 
 ## Experimentation process
 
