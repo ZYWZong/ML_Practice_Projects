@@ -6,7 +6,7 @@ This project is to classify sentences of an abstract into five categories of `OB
 
 ## Results
 
-We performed experiments on *CNN*, *RNN* (*LSTM* and *GRU*), and *transfomer* architectures. Out of these experiments, two models (`model_CNN_E1` and `model_LSTM`) have emerged as our best models within our computation budget. Our **best** model is `model_LSTM`, which achieves an accuracy of $84.51$% on the development data while maintaining more than $80$% on all other scores. We show the scores of our models illustratively below:
+We performed experiments on **CNN**, **RNN** (**LSTM** and **GRU**), and **transfomer** architectures. Out of these experiments, two models (`model_CNN_E1` and `model_LSTM`) have emerged as our best models within our computation budget. Our **best** model is `model_LSTM`, which achieves an accuracy of $84.51$% on the development data while maintaining more than $80$% on all other scores. We show the scores of our models illustratively below:
 
 ![pictures/image.png](https://github.com/ZYWZong/ML_Practice_Projects/blob/2a2d8e8640c5c253c2f48a8fe0be710c54e78657/SkimLit_project_practice/SkimLit_results_raw/Result_scores.png)
 
