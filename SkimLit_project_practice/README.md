@@ -10,7 +10,7 @@ We performed experiments on **CNN**, **RNN** (**LSTM** and **GRU**), and **trans
 
 ![pictures/image.png](https://github.com/ZYWZong/ML_Practice_Projects/blob/2a2d8e8640c5c253c2f48a8fe0be710c54e78657/SkimLit_project_practice/SkimLit_results_raw/Result_scores.png)
 
-The detailed socres are:
+The exact socres are:
 
 | Metric (%)  | Random Forest 15 (baseline) | Model CNN E1 | Model LSTM |
 | :-------- | :-------: | :-------: | :-------: |
