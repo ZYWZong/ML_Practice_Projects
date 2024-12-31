@@ -27,7 +27,7 @@ The exact socres are:
 
 * In [**notebook 02**](https://github.com/ZYWZong/ML_Practice_Projects/blob/42e9e455dd0a2ae73c8d9d6f2beb35d2262d5319/SkimLit_project_practice/SkimLit_experiment02_multiple_embeddings_LSTM_and_GRU_02.ipynb), we applied positional, character, and token embeddings to our data and use these embeddings to build an LSTM and a GRU models. We find our best RNN model to be `model_LSTM`.
 
-* In **notebook 03**, we attempted transformer models. However, due to limited computation budget, we were unable to obtain satisfactory scores for these models.
+* In [**notebook 03**](https://github.com/ZYWZong/ML_Practice_Projects/blob/50fc2a44c9796ece822e85d9e788b7dd5368aabf/SkimLit_project_practice/SkimLit_experiment03_transformers_03.ipynb), we attempted transformer models. However, due to limited computation budget, we were unable to obtain satisfactory scores for these models.
 
 * In [**notebook 04**](https://github.com/ZYWZong/ML_Practice_Projects/blob/42e9e455dd0a2ae73c8d9d6f2beb35d2262d5319/SkimLit_project_practice/SkimLit_results_04.ipynb), we summarized our results.
 
