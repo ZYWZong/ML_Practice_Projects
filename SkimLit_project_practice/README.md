@@ -19,6 +19,8 @@ The exact socres are:
 | Recall    | 76.10     | 78.57     | 84.51     |
 | F-1       | 75.31     | 78.24     | 84.19     |
 
+Although our best model achieved over $80\%$ on all scores, this should not be seen as exploited all potentials of machine learning for this sentence classification task. For us, humans (even people who are not an expert in medical research), we can easily classify the sentences into the five category with over $90\%$ accuracy. This means the Bayes optimal error for this sentence classification task is less than $10\%$. So, from our empirical understanding of machine learning techniques, we should expect there is a model that at least performs similarly to human. `model_LSTM` has this potential, since due to limited computation budget we have not yet experiment on further fine-tuning the hyperparameters such as learning rate, batch sizes, and have not yet trained the model on bigger data or for more epochs. For further development, we could try these all. And, hopefully, we will arrive at a human-level performance model.
+
 ## Experimentation process
 
 * In [**notebook 00**](https://github.com/ZYWZong/ML_Practice_Projects/blob/e60a659556b3f231576d4f5c81e0fd0e491ba57e/SkimLit_project_practice/SkimLit_data_preprocessing_and_baseline_model_00.ipynb), we used classic statistical learning methods (Naive Bayes and Random Forests) to build the best baseline model, which we found to be a 15 tree Random Forest model.
