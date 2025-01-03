@@ -1,4 +1,4 @@
-# NLP Project 01: SkimLit PubMed sentence classifier
+# NLP Project 01: SkimLit abstract reader for medical papers
 
 ## Objective
 
