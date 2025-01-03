@@ -1,4 +1,4 @@
-# NLP Project 01: SkimLit abstract reader for medical papers
+# NLP Project 01: *SkimLit* abstract reader for medical papers
 
 ## Objective
 
